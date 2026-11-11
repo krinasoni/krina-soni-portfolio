@@ -4,8 +4,8 @@ export const educationData = [
     degree: "Master's in Computing Science",
     institution: "Griffith College Dublin",
     location: "Dublin, Ireland",
-    period: "Pursuing / Current",
-    status: "In Progress",
+    period: "Completed",
+    status: "Graduated",
     description: "Deepening expertise in advanced software architecture, cloud computing paradigms, distributed applications, algorithmic problem solving, and modern emerging technologies in Ireland's vibrant tech hub.",
     highlights: ["Advanced Computing Paradigms", "Software Architecture & Quality", "Emerging AI & Cloud Systems", "International Tech Hub Experience"]
   },
