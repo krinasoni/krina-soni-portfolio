@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #090611;
+    --bg-secondary: #110B20;
+    --primary-purple: #8B5CF6;
+    --electric-violet: #A855F7;
+    --lavender: #C4B5FD;
+    --soft-white: #F5F3FF;
+    --muted-text: #A7A0B8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--soft-white);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #090611;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #23163E;
+    border-radius: 9999px;
+    border: 2px solid #090611;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B5CF6;
+  }
+}
+
+/* Glassmorphism & Glow Utilities */
+.glass-panel {
+  background: rgba(17, 11, 32, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 12px 40px 0 rgba(139, 92, 246, 0.2);
+  transform: translateY(-3px);
+}
+
+.glass-pill {
+  background: rgba(139, 92, 246, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(196, 181, 253, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #F5F3FF 0%, #C4B5FD 45%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #C4B5FD 0%, #A855F7 50%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -3px rgba(139, 92, 246, 0.4);
+}
+
+.glow-violet {
+  box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.5);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* Cosmic Nebula Background Blobs */
+.nebula-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.45;
+  mix-blend-mode: screen;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
