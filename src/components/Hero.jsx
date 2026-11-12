@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown, ExternalLink, Sparkles, Code2, Compass } from "lucide-react";
-import { GithubIcon, LinkedinIcon, InstagramIcon } from "./SocialIcons";
-
+import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 
 const ROLES = [
   "Full Stack Developer",
@@ -21,14 +20,8 @@ const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
     icon: LinkedinIcon,
-    href: "https://www.linkedin.com/in/krina-soni-8599992a5",
+    href: "https://www.linkedin.com/in/krina-soni-8599992a5/",
     label: "Connect on LinkedIn",
-  },
-  {
-    name: "Instagram",
-    icon: InstagramIcon,
-    href: "https://instagram.com/krina.codes",
-    label: "Follow on Instagram",
   },
 ];
 

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Starfield from "./components/Starfield";
 import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";

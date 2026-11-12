@@ -1,14 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  X, 
-  ExternalLink, 
+  X,  
   CheckCircle2, 
   Cpu, 
   Layers, 
-  Sparkles,
-  ArrowRight
+  Sparkles
 } from "lucide-react";
-import { GithubIcon } from "./SocialIcons";
 import { 
   TravelPlannerMockup, 
   StudyAIMockup, 
@@ -140,38 +137,7 @@ export default function ProjectModal({ project, onClose }) {
               </div>
             </div>
 
-            {/* Action Links */}
-            <div className="pt-4 border-t border-purple-500/20 flex flex-wrap items-center gap-4">
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold glass-panel border border-purple-500/30 text-white hover:border-purple-400 hover:bg-purple-500/20 transition-all hover:scale-105"
-                >
-                  <GithubIcon className="w-4 h-4" />
-                  <span>Inspect Repository</span>
-                </a>
-              )}
-
-              {project.demoUrl && (
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] text-white shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all hover:scale-105"
-                >
-                  <span>Launch Live Preview</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              )}
-
-              {!project.githubUrl && !project.demoUrl && (
-                <span className="text-xs text-[#A7A0B8]">
-                  Repository and live demo links will be added when available.
-                </span>
-              )}
-            </div>
+            
 
           </div>
         </motion.div>
